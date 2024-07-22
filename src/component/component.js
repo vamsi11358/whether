@@ -42,7 +42,7 @@ export default function Component() {
             />
             <button onClick={handleSearch}>Search</button>
             {loading && (
-                <p>Loading data…</p>
+                <p>Loading data... </p>
             )}
             {!loading && (
                 <div className="weather-cards">
