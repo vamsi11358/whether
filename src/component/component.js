@@ -41,7 +41,7 @@ export default function Component() {
                 placeholder="Enter city name" 
             />
             <button onClick={handleSearch}>Search</button>
-            {
+            {!loading && (
             <div className="weather-cards">
                 {data && data.current && (
                     <>
@@ -74,7 +74,9 @@ export default function Component() {
                     </>
                 )}
             </div>
-}
+)}{loading &&(
+    <div>Loading data…</div>
+)}
         </>
     );
 }
